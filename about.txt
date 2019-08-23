@@ -1,0 +1,40 @@
+Spotlight Full Text Search Plugin
+==============================
+
+Created by soychicka (August 2019)
+
+Requires Calibre >= 3.41.3 (as tested, it may run on earlier versions.  Lemme know if it doesn't?)
+
+Runs only on OS X systems (uses spotlight which is only available in OS X).
+
+This plugin lets you run a full text search in Calibre that uses your Mac's pre-existing Spotlight index to look inside your documents, displaying the matches in calibre.
+
+
+Install
+==============================
+
+Steps to get this plugin working:
+1. install plugin
+
+2. add a column to store ids
+2.a) Open Preferencies > add your own columns
+2.b) create a new column with:
+			Lookup name: cid
+			Column heading: CID
+			Column type: "Column built from other columns"
+			Template: {id}   # include brackets
+			Sort/Search column by: number
+
+
+3.  Use it
+
+To search:  Cmd-Shift-X
+
+
+
+
+
+Changes since 1.0.0
+==============================
+1.0.1 
+- firsties
