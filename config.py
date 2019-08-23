@@ -16,7 +16,7 @@ from calibre.utils.config import JSONConfig
 # in a global namespace, so make it as unique as possible.
 # You should always prefix your config file name with plugins/,
 # so as to ensure you dont accidentally clobber a calibre config file
-prefs = JSONConfig('plugins/spotlight_fulltext_search')
+prefs = JSONConfig('plugins/spotlight_libre')
 
 # Set defaults
 prefs.defaults['pathToLibrary'] = '$HOME/Calibre Library'
@@ -30,7 +30,7 @@ class ConfigWidget(QWidget):
         self.l = QVBoxLayout()
         self.setLayout(self.l)
                 
-        self.labelText = QLabel('Set the paths to the different directories.\nDo not use "/" at the end of the path.\nDefaults are:\nPath to Calibre Library directory: $HOME/Calibre Library\nPath to Calibre Config directory: $HOME/.config/calibre\nPath to spotlight bin directory: /usr/bin')
+        self.labelText = QLabel('None of this is used right now.  Set the paths to the different directories.\nDo not use "/" at the end of the path.\nDefaults are:\nPath to Calibre Library directory: $HOME/Calibre Library\nPath to Calibre Config directory: $HOME/.config/calibre\nPath to spotlight bin directory: /usr/bin')
         
         
         self.l.addWidget(self.labelText)

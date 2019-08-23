@@ -18,7 +18,7 @@ from PyQt5.Qt import (QAction, QInputDialog, QDialog, QVBoxLayout, QPushButton, 
 											
 from css_parser.css import CSSRule
 
-from calibre_plugins.spotlight_fulltext_search.config import prefs
+from calibre_plugins.spotlight_libre.config import prefs
 
 from subprocess import Popen, PIPE, STDOUT
 import re
@@ -45,7 +45,7 @@ class AboutWindow(QMainWindow):
     def clicked(self):
         self.close()
 
-class SpotlightFulltextSearchDialog(QDialog):
+class SpotlightLibreDialog(QDialog):
 
     def __init__(self, gui, icon, do_user_config):
         QDialog.__init__(self, gui)
@@ -65,7 +65,7 @@ class SpotlightFulltextSearchDialog(QDialog):
         self.l.addWidget(self.labelText)
 
         # Title
-        self.setWindowTitle('Spotlight Full Text Search')
+        self.setWindowTitle('SpotlightLibre Full Text Search')
         self.setWindowIcon(icon)
 
         # Search window
@@ -114,11 +114,11 @@ class SpotlightFulltextSearchDialog(QDialog):
         
         text = get_resources('about.txt')
         #box = QMessageBox()
-        #box.about(self, 'About the Spotlight Full Text Search \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t',text.decode('utf-8'))
+        #box.about(self, 'About the SpotlightLibre Full Text Search \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t',text.decode('utf-8'))
         #self.resize(600, self.height())
         
         self.box = AboutWindow()
-        self.box.setWindowTitle("About the Spotlight Full Text Search Plugin")
+        self.box.setWindowTitle("About the SpotlightLibre Full Text Search Plugin")
         self.box.textWindow.setText(text)
         self.box.textWindow.setReadOnly(True)
         self.box.resize(600, 500)

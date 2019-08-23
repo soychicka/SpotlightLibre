@@ -10,9 +10,9 @@ __docformat__ = 'restructuredtext en'
 
 # The class that all interface action plugins must inherit from
 from calibre.gui2.actions import InterfaceAction
-from calibre_plugins.spotlight_fulltext_search.main import SpotlightFulltextSearchDialog
+from calibre_plugins.spotlight_libre.main import SpotlightLibreDialog
 
-class SpotlightFulltextSearchPlugin(InterfaceAction):
+class SpotlightLibrePlugin(InterfaceAction):
 
     name = 'Spotlight Full Text Search'
 
@@ -20,8 +20,8 @@ class SpotlightFulltextSearchPlugin(InterfaceAction):
     # The keyboard shortcut can be None if you dont want to use a keyboard
     # shortcut. Remember that currently calibre has no central management for
     # keyboard shortcuts, so try to use an unusual/unused shortcut.
-    action_spec = ('Spotlight Full Text Search', None,
-            'Run the Spotlight Full Text Search', 'Ctrl+Shift+X')
+    action_spec = ('SpotlightLibre', None,
+            'Run the SpotlightLibre Full Text Search', 'Ctrl+Shift+X')
 
     def genesis(self):
         # This method is called once per plugin, do initial setup here
@@ -54,11 +54,11 @@ class SpotlightFulltextSearchPlugin(InterfaceAction):
         # self.gui is the main calibre GUI. It acts as the gateway to access
         # all the elements of the calibre user interface, it should also be the
         # parent of the dialog
-        d = SpotlightFulltextSearchDialog(self.gui, self.qaction.icon(), do_user_config)
+        d = SpotlightLibreDialog(self.gui, self.qaction.icon(), do_user_config)
         d.show()
 
     def apply_settings(self):
-        from calibre_plugins.spotlight_fulltext_search.config import prefs
+        from calibre_plugins.spotlight_libre.config import prefs
         # In an actual non trivial plugin, you would probably need to
         # do something based on the settings in prefs
         prefs
